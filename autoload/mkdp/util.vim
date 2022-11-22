@@ -59,7 +59,7 @@ function! mkdp#util#stop_preview() abort
 endfunction
 
 function! mkdp#util#get_platform() abort
-  if has('win32') || has('win64')
+  if has('win32') || has('win64') || has('win32unix')
     return 'win'
   elseif has('mac') || has('macvim')
     return 'macos'
